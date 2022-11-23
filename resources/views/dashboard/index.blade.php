@@ -39,19 +39,19 @@
     </div>
     <div id="comments" class="mt-1">
         @foreach ($todos as $todo)
-            
         <div class="comment d-flex align-items-start justify-content-between">
             <div class="mr-2">
                 <label class="option">
-                    <input type="checkbox">
+                    <input type="checkbox"> 
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div style="color:#474748;" class="d-flex flex-column w-75">
-                <b class="text-justify">
+            <div class="d-flex flex-column w-75">
+                <a href="/todo/edit/{{$todo['id']}}" class="text-justify font-weight-bold">
                     {{ $todo['title']}}
-                </b>
-                <p class="text-muted">{{ $todo['status'] ? 'Complated' : 'On-Progress' }} <span class="date">Nov 23, 2022</span></p>
+                </a>
+                <p class="text-muted">{{ $todo['status'] ? 'Complated' : 'On-Progress' }} <span class="date">{{ \Carbon\Carbon::parse($todo['date'])->format('j F, Y') }}</span></p>
+                {{-- untuk membuat tanggal menjadi tulisan --}}
             </div>
             <div class="ml-auto">
                 <span class="fas fa-arrow-right btn"></span>

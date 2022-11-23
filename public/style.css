@@ -2,8 +2,6 @@
 body{
     background-image: url("https://color-hex.org/colors/395144.png");
     background-size: cover;
-    background-color: black;
-    color: white;
     font-family: "Poppins", sans-serif;
 
 }
@@ -55,7 +53,7 @@ body{
     transition: 0.5s;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -63,11 +61,11 @@ ul {
     background-color: #333;
   }
   
-  li {
+nav li {
     float: left;
   }
   
-  li a {
+nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -75,10 +73,10 @@ ul {
     text-decoration: none;
   }
   
-  li a:hover:not(.active) {
+nav li a:hover:not(.active) {
     background-color: #111;
   }
   
-  .active {
+nav .active {
     background-color: #04AA6D;
   }
