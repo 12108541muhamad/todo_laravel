@@ -1,0 +1,84 @@
+/* Login Register */
+body{
+    background-image: url("https://color-hex.org/colors/395144.png");
+    background-size: cover;
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.logreg .container{
+    background-color: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    box-shadow: 1px 1px 1px black;
+    border-radius: 2%;
+    width: 30%;
+    padding: 10px 20px 50px 20px;
+    margin-top: 5%;
+}
+
+.logreg p{
+    color: white;
+}
+
+.logreg h3{
+    padding-bottom: 20px;
+    color: white;
+}
+.logreg input{
+    padding-left: 10px;
+    width: 200px;
+    height: 30px;
+}
+.logreg a{
+    text-decoration: none;
+    color: aqua;
+}
+.logreg a:hover{
+    color: aqua;
+}
+
+.logreg button{
+    width: 30%;
+    border-radius: 100px;
+    border: none ;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: rgb(104, 104, 104);
+    color: white;
+    cursor: pointer;
+}
+.logreg button:hover{
+    background-color: rgb(241, 239, 239);
+    color: black;
+    transition: 0.5s;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
