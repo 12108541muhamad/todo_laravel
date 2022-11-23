@@ -47,7 +47,7 @@
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <div class="d-flex flex-column w-75">
+            <div style="color:#474748;" class="d-flex flex-column w-75">
                 <b class="text-justify">
                     {{ $todo['title']}}
                 </b>
