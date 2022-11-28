@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Montserrat:wght@100&family=Nerko+One&display=swap');
 /* Login Register */
 body{
-    background-image: url("https://color-hex.org/colors/395144.png");
-    background-size: cover;
+    background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100%;
     font-family: "Poppins", sans-serif;
 
 }
@@ -13,7 +18,7 @@ body{
     border-radius: 2%;
     width: 30%;
     padding: 10px 20px 50px 20px;
-    margin-top: 5%;
+    margin-top: 8%;
 }
 
 .logreg p{
@@ -73,14 +78,14 @@ nav li a {
     text-decoration: none;
   }
   
-nav li a:hover:not(.active) {
-    background-color: #111;
-  }
-  
 nav .active {
     background-color: #04AA6D;
   }
 
 .dropdown-toogle:checked{
     top: 90;
+}
+
+nav .nav-title{
+    font-style: italic;
 }
