@@ -2,8 +2,9 @@
 
 @section('content')
 <div class="container content">  
-  <form method="POST" action="" id="create-form">
+  <form method="POST" action="{{route('todo.update', $todo['id'])}}" id="create-form">
     @csrf
+    @method('PATCH')
     <h3>Edit Todo</h3>
     @if ($errors->any())
             <div class="alert alert-danger">

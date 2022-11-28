@@ -12,6 +12,11 @@
             {{ Session::get('successAdd') }}
         </div>
     @endif
+    @if (Session::get('successUpdate'))
+        <div class="alert alert-success">
+            {{ Session::get('successUpdate') }}
+        </div>
+    @endif
     <div class="d-flex align-items-start justify-content-between">
         <div class="d-flex flex-column">
             <div class="h5">My Todo's</div>
