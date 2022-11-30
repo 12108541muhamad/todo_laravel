@@ -51,10 +51,15 @@
         @foreach ($todos as $todo)
         <div class="comment d-flex align-items-start justify-content-between">
             <div class="mr-2">
-                <label class="option">
-                    <input type="checkbox"> 
+                <form action="/todo/complated/{{$todo['id']}}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <button type="submit" class="fas fa-check" style="background: #B9E0FF; padding: 8px !important;"></button>
+                </form>
+                {{-- <label class="option">
+                    <input type="checkbox">
                     <span class="checkmark"></span>
-                </label>
+                </label> --}}
             </div>
             <div class="d-flex flex-column w-75">
                 <a href="/todo/edit/{{$todo['id']}}" class="text-justify font-weight-bold">

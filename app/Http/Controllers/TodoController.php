@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class TodoController extends Controller
 {
@@ -87,6 +88,19 @@ class TodoController extends Controller
     {
         return view('dashboard.complated');
     }
+
+    public function updateComplated($id)
+    {
+        // $id pada parameter mengambil data dari path dinamis {id}
+        // cari data yang memiliki value column id sama dengan data id yang dikirim  ke route, maka update baris data tersebut
+        Todo::where('id', $id)->update([
+            'status' => 1,
+            'done_time' => Carbon::now(),
+        ]);
+        // kalao berhasil bakal diarahin ke halaman list todo yang completed dengan pemberitahuan
+        return redirect()->route('todo.complated')->with('done', 'Todo sudah selesai dikerjakan!');
+    }
+
     public function create()
     {
         //menampilkan halaman input form tambah data

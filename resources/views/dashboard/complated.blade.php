@@ -2,6 +2,11 @@
 
 @section('content')
 <div class="wrapper bg-white">
+    @if (Session::get('done'))
+        <div class="alert alert-success">
+            {{ Session::get('done') }}
+        </div>
+    @endif
     <div class="d-flex align-items-start justify-content-between">
         <div class="d-flex flex-column">
             <div class="h5">My Complated Todo's</div>
