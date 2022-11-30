@@ -79,7 +79,10 @@ class TodoController extends Controller
     {
         //menampilkan halaman awal, semua data
         // cari data todo yang punya user_id nya sama dengan id orang yang login. kalo ketemu datanya diambil
-        $todos = Todo::where('user_id', '=', Auth::user()->id)->get();
+        $todos = Todo::where([
+            ['user_id', '=', Auth::user()->id],
+            ['status', '=', 0],
+        ])->get();
         //tampilin file index di folder dashboard dan bawa data dari variable yang namanya todos ke fil tersebut
         return view('dashboard.index', compact('todos'));
     }
