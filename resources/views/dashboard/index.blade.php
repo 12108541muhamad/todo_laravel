@@ -17,6 +17,11 @@
             {{ Session::get('successUpdate') }}
         </div>
     @endif
+    @if (Session::get('successDelete'))
+        <div class="alert alert-success">
+            {{ Session::get('successDelete') }}
+        </div>
+    @endif
     <div class="d-flex align-items-start justify-content-between">
         <div class="d-flex flex-column">
             <div class="h5">My Todo's</div>
@@ -59,7 +64,13 @@
                 {{-- untuk membuat tanggal menjadi tulisan --}}
             </div>
             <div class="ml-auto">
-                <span class="fas fa-arrow-right btn"></span>
+                <form action="{{ route('todo.delete', $todo['id']) }}" method="POST">
+                    @csrf
+                    {{-- menimpa attribute method="POST" pada form agar menjadi delete, karena di method route nya menggunakan delete --}}
+                    @method('DELETE')
+                    {{-- biar action form nya bisa dijalanin, buttonnya harus type submit --}}
+                    <button type="submit" class="fas fa-trash text-danger btn"></button>
+                </form>
             </div>
         </div>
         @endforeach

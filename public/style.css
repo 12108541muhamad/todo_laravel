@@ -12,9 +12,9 @@ body{
 }
 
 .logreg .container{
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.6);
     backdrop-filter: blur(2px);
-    box-shadow: 1px 1px 1px black;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.5);
     border-radius: 2%;
     width: 30%;
     padding: 10px 20px 50px 20px;
